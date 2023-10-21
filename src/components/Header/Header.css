@@ -1,0 +1,11 @@
+div, div a{
+    padding: 20px 90px;
+    margin-bottom: 200px;
+    color: black;
+    border-radius: 10px;
+}
+
+.active{
+    color: white;
+    background-color: black;
+}
