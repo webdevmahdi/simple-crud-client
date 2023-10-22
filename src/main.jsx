@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Users from './components/Users/Users.jsx';
 import UserForm from './components/UserAdding/UserForm.jsx';
+import User from './components/Users/User.jsx';
 
 let router = createBrowserRouter([
   {
@@ -22,6 +23,11 @@ let router = createBrowserRouter([
         path: '/users',
         element: <Users></Users>,
         loader: () => fetch('http://localhost:5000/users')
+      },
+      {
+        path: '/update/:id',
+        element: <User></User>,
+        loader: ({params}) => fetch(`http://localhost:5000/users/${params.id}`)
       }
     ]
   }
